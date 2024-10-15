@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "naturalgodocs_packagings",
+  "info": {
+    "singularName": "naturalgodocs-packaging",
+    "pluralName": "naturalgodocs-packagings",
+    "displayName": "naturalgodocs_packaging"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

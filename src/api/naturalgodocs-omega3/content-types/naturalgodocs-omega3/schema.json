@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "naturalgodocs_omega3s",
+  "info": {
+    "singularName": "naturalgodocs-omega3",
+    "pluralName": "naturalgodocs-omega3s",
+    "displayName": "naturalgodocs_omega3"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

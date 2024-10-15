@@ -1,5 +1,5 @@
 {
-  "name": "strapi",
+  "name": "strapi-cms",
   "version": "0.1.0",
   "private": true,
   "description": "A Strapi application",
@@ -7,19 +7,24 @@
     "build": "strapi build",
     "deploy": "strapi deploy",
     "develop": "strapi develop",
+    "seed:example": "node ./scripts/seed.js",
     "start": "strapi start",
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.0.2",
-    "@strapi/plugin-users-permissions": "5.0.2",
-    "@strapi/provider-upload-cloudinary": "5.0.2",
-    "@strapi/strapi": "5.0.2",
-    "pg": "8.8.0",
+    "@strapi/plugin-cloud": "5.0.3",
+    "@strapi/plugin-users-permissions": "5.0.3",
+    "@strapi/provider-upload-cloudinary": "^5.0.6",
+    "@strapi/strapi": "5.0.3",
+    "@strapi/utils": "^5.0.6",
+    "better-sqlite3": "9.4.3",
+    "cloudinary": "^2.5.1",
+    "fs-extra": "^10.0.0",
+    "mime-types": "^2.1.27",
+    "pg": "^8.13.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
-    "strapi-health-plugin": "^1.1.0",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
@@ -29,9 +34,10 @@
     "typescript": "^5"
   },
   "engines": {
-    "node": "20"
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
   },
   "strapi": {
-    "uuid": "fbaf61cd-dcdc-45ae-bf43-8781f5861c55"
+    "uuid": "30f6cd8d-bb16-476e-b183-2be3a1addbe4"
   }
 }

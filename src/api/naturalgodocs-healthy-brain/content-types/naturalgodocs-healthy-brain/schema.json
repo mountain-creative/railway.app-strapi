@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "naturalgodocs_healthy_brains",
+  "info": {
+    "singularName": "naturalgodocs-healthy-brain",
+    "pluralName": "naturalgodocs-healthy-brains",
+    "displayName": "naturalgodocs_healthy_brain"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

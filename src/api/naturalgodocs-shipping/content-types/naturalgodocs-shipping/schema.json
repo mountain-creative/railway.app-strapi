@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "naturalgodocs_shippings",
+  "info": {
+    "singularName": "naturalgodocs-shipping",
+    "pluralName": "naturalgodocs-shippings",
+    "displayName": "naturalgodocs_shipping"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

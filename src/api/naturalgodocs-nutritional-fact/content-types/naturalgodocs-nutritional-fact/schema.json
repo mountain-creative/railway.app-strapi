@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "naturalgodocs_nutritional_facts",
+  "info": {
+    "singularName": "naturalgodocs-nutritional-fact",
+    "pluralName": "naturalgodocs-nutritional-facts",
+    "displayName": "naturalgodocs_nutritional_fact"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}
