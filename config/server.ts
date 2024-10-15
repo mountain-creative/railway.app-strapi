@@ -6,4 +6,8 @@ export default ({ env }) => ({
   },
   url: env("URL"),
   proxy: true,
+  healthCheck: {
+    enabled: true,
+    path: "/health",
+  },
 });
