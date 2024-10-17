@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "naturalgodocs_certifications",
+  "info": {
+    "singularName": "naturalgodocs-certification",
+    "pluralName": "naturalgodocs-certifications",
+    "displayName": "naturalgodocs_certification"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "funciones": {
+      "type": "richtext"
+    },
+    "cargo": {
+      "type": "string"
+    },
+    "tipo": {
+      "type": "string"
+    },
+    "meses": {
+      "type": "string"
+    },
+    "horas_mes": {
+      "type": "string"
+    }
+  }
+}

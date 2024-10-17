@@ -663,6 +663,40 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiNaturalgodocsCertificationNaturalgodocsCertification
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'naturalgodocs_certifications';
+  info: {
+    singularName: 'naturalgodocs-certification';
+    pluralName: 'naturalgodocs-certifications';
+    displayName: 'naturalgodocs_certification';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    nombre: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    funciones: Schema.Attribute.RichText;
+    cargo: Schema.Attribute.String;
+    tipo: Schema.Attribute.String;
+    meses: Schema.Attribute.String;
+    horas_mes: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::naturalgodocs-certification.naturalgodocs-certification'
+    >;
+  };
+}
+
 export interface ApiNaturalgodocsHealthyBrainNaturalgodocsHealthyBrain
   extends Struct.CollectionTypeSchema {
   collectionName: 'naturalgodocs_healthy_brains';
@@ -1302,6 +1336,7 @@ declare module '@strapi/strapi' {
       'api::blog.blog': ApiBlogBlog;
       'api::category.category': ApiCategoryCategory;
       'api::global.global': ApiGlobalGlobal;
+      'api::naturalgodocs-certification.naturalgodocs-certification': ApiNaturalgodocsCertificationNaturalgodocsCertification;
       'api::naturalgodocs-healthy-brain.naturalgodocs-healthy-brain': ApiNaturalgodocsHealthyBrainNaturalgodocsHealthyBrain;
       'api::naturalgodocs-nutritional-fact.naturalgodocs-nutritional-fact': ApiNaturalgodocsNutritionalFactNaturalgodocsNutritionalFact;
       'api::naturalgodocs-omega3.naturalgodocs-omega3': ApiNaturalgodocsOmega3NaturalgodocsOmega3;
