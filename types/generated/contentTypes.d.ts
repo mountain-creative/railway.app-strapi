@@ -955,6 +955,34 @@ export interface ApiNewsDailyNewsDaily extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiOmega3NewsletterOmega3Newsletter
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'omega3_newsletters';
+  info: {
+    singularName: 'omega3-newsletter';
+    pluralName: 'omega3-newsletters';
+    displayName: 'omega3-newsletter';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    email: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::omega3-newsletter.omega3-newsletter'
+    >;
+  };
+}
+
 export interface AdminPermission extends Struct.CollectionTypeSchema {
   collectionName: 'admin_permissions';
   info: {
@@ -1345,6 +1373,7 @@ declare module '@strapi/strapi' {
       'api::naturalgodocs-shipping.naturalgodocs-shipping': ApiNaturalgodocsShippingNaturalgodocsShipping;
       'api::naturalgodocs-social-listing.naturalgodocs-social-listing': ApiNaturalgodocsSocialListingNaturalgodocsSocialListing;
       'api::news-daily.news-daily': ApiNewsDailyNewsDaily;
+      'api::omega3-newsletter.omega3-newsletter': ApiOmega3NewsletterOmega3Newsletter;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;
       'admin::role': AdminRole;

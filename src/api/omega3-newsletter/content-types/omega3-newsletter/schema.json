@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "omega3_newsletters",
+  "info": {
+    "singularName": "omega3-newsletter",
+    "pluralName": "omega3-newsletters",
+    "displayName": "omega3-newsletter"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
