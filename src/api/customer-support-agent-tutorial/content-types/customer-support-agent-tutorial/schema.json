@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customer_support_agent_tutorials",
+  "info": {
+    "singularName": "customer-support-agent-tutorial",
+    "pluralName": "customer-support-agent-tutorials",
+    "displayName": "customer_support_agent_tutorial"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image_url": {
+      "type": "text"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

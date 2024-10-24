@@ -635,6 +635,37 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCustomerSupportAgentTutorialCustomerSupportAgentTutorial
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'customer_support_agent_tutorials';
+  info: {
+    singularName: 'customer-support-agent-tutorial';
+    pluralName: 'customer-support-agent-tutorials';
+    displayName: 'customer_support_agent_tutorial';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.Text;
+    description: Schema.Attribute.Text;
+    image_url: Schema.Attribute.Text;
+    content: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::customer-support-agent-tutorial.customer-support-agent-tutorial'
+    >;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -1363,6 +1394,7 @@ declare module '@strapi/strapi' {
       'api::author.author': ApiAuthorAuthor;
       'api::blog.blog': ApiBlogBlog;
       'api::category.category': ApiCategoryCategory;
+      'api::customer-support-agent-tutorial.customer-support-agent-tutorial': ApiCustomerSupportAgentTutorialCustomerSupportAgentTutorial;
       'api::global.global': ApiGlobalGlobal;
       'api::naturalgodocs-certification.naturalgodocs-certification': ApiNaturalgodocsCertificationNaturalgodocsCertification;
       'api::naturalgodocs-healthy-brain.naturalgodocs-healthy-brain': ApiNaturalgodocsHealthyBrainNaturalgodocsHealthyBrain;
