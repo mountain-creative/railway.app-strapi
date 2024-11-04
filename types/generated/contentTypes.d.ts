@@ -694,6 +694,36 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiNaturalgodocNaturalgodoc
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'naturalgodocs';
+  info: {
+    singularName: 'naturalgodoc';
+    pluralName: 'naturalgodocs';
+    displayName: 'naturalgodoc';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    page_name: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.Text;
+    text: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::naturalgodoc.naturalgodoc'
+    >;
+  };
+}
+
 export interface ApiNaturalgodocsCertificationNaturalgodocsCertification
   extends Struct.CollectionTypeSchema {
   collectionName: 'naturalgodocs_certifications';
@@ -1396,6 +1426,7 @@ declare module '@strapi/strapi' {
       'api::category.category': ApiCategoryCategory;
       'api::customer-support-agent-tutorial.customer-support-agent-tutorial': ApiCustomerSupportAgentTutorialCustomerSupportAgentTutorial;
       'api::global.global': ApiGlobalGlobal;
+      'api::naturalgodoc.naturalgodoc': ApiNaturalgodocNaturalgodoc;
       'api::naturalgodocs-certification.naturalgodocs-certification': ApiNaturalgodocsCertificationNaturalgodocsCertification;
       'api::naturalgodocs-healthy-brain.naturalgodocs-healthy-brain': ApiNaturalgodocsHealthyBrainNaturalgodocsHealthyBrain;
       'api::naturalgodocs-nutritional-fact.naturalgodocs-nutritional-fact': ApiNaturalgodocsNutritionalFactNaturalgodocsNutritionalFact;
