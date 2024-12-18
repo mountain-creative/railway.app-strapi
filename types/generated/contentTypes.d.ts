@@ -765,6 +765,7 @@ export interface ApiNaturalgodocsContactUsNaturalgodocsContactUs
     singularName: 'naturalgodocs-contact-us';
     pluralName: 'naturalgodocs-contact-uses';
     displayName: 'naturalgodocs_contact_us';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -777,7 +778,7 @@ export interface ApiNaturalgodocsContactUsNaturalgodocsContactUs
     query: Schema.Attribute.String;
     region: Schema.Attribute.String;
     message: Schema.Attribute.RichText;
-    marked: Schema.Attribute.Boolean;
+    marked: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

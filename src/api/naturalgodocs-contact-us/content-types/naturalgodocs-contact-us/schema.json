@@ -4,7 +4,8 @@
   "info": {
     "singularName": "naturalgodocs-contact-us",
     "pluralName": "naturalgodocs-contact-uses",
-    "displayName": "naturalgodocs_contact_us"
+    "displayName": "naturalgodocs_contact_us",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -33,7 +34,7 @@
       "type": "richtext"
     },
     "marked": {
-      "type": "boolean"
+      "type": "string"
     }
   }
 }
